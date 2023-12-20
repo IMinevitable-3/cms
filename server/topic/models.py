@@ -66,6 +66,7 @@ class TopicPage(Page):
     api_fields = [
         APIField('intro'),
         APIField('body'),
+        APIField('TopicPageRelatedLink')
     ]
 
 

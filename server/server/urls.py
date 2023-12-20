@@ -8,6 +8,8 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 from .api import api_router
+
+from topic.views import  DocumentsOfAPageAPIView
 urlpatterns = [
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
@@ -28,6 +30,7 @@ urlpatterns = urlpatterns + [
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
+    path('api/topic-page/<int:pk>/documents/', DocumentsOfAPageAPIView.as_view(), name='topic-page-documents'),
     path('api/', api_router.urls),
     path("", include(wagtail_urls)),
     # Alternatively, if you want Wagtail pages to be served from a subpath

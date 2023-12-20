@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "4ec56d3b-c799-4a34-b361-3ee5587a2734",
+		"name": "CMS",
+		"description": "**For more information about a request call url in detail_url**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30114668"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/documents/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Returns all documents uploaded by admin .\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 2\n    },\n    \"items\": [\n        {\n            \"id\": 1,\n            \"meta\": {\n                \"type\": \"wagtaildocs.Document\",\n                \"detail_url\": \"http://localhost/api/documents/1/\",\n                \"tags\": [],\n                \"download_url\": \"http://localhost/documents/1/bash.pdf\"\n            },\n            \"title\": \"bash\"\n        },\n        {\n            \"id\": 2,\n            \"meta\": {\n                \"type\": \"wagtaildocs.Document\",\n                \"detail_url\": \"http://localhost/api/documents/2/\",\n                \"tags\": [],\n                \"download_url\": \"http://localhost/documents/2/ressuc.pdf\"\n            },\n            \"title\": \"ressuc\"\n        }\n    ]\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 13:01:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "717"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"total_count\": 2\n    },\n    \"items\": [\n        {\n            \"id\": 1,\n            \"meta\": {\n                \"type\": \"wagtaildocs.Document\",\n                \"detail_url\": \"http://localhost/api/documents/1/\",\n                \"tags\": [],\n                \"download_url\": \"http://localhost/documents/1/bash.pdf\"\n            },\n            \"title\": \"bash\"\n        },\n        {\n            \"id\": 2,\n            \"meta\": {\n                \"type\": \"wagtaildocs.Document\",\n                \"detail_url\": \"http://localhost/api/documents/2/\",\n                \"tags\": [],\n                \"download_url\": \"http://localhost/documents/2/ressuc.pdf\"\n            },\n            \"title\": \"ressuc\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/images/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/images/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"images",
+						""
+					]
+				},
+				"description": "Returns all Images\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 0\n    },\n    \"items\": []\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/pages/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Returns all published pages .\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 1\n    },\n    \"items\": [\n        {\n            \"id\": 3,\n            \"meta\": {\n                \"type\": \"home.HomePage\",\n                \"detail_url\": \"http://localhost/api/pages/3/\",\n                \"html_url\": \"http://localhost/\",\n                \"slug\": \"home\",\n                \"first_published_at\": \"2023-12-19T12:10:02.753860Z\"\n            },\n            \"title\": \"Home\"\n        }\n    ]\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/pages/?type=topic.TopicIndexPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Returns Index of topics .\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 2\n    },\n    \"items\": [\n        {\n            \"id\": 19,\n            \"meta\": {\n                \"type\": \"topic.TopicIndexPage\",\n                \"detail_url\": \"http://localhost/api/pages/19/\",\n                \"html_url\": \"http://localhost/noun/\",\n                \"slug\": \"noun\",\n                \"first_published_at\": \"2023-12-19T14:00:03.519635Z\"\n            },\n            \"title\": \"noun\"\n        },\n        {\n            \"id\": 22,\n            \"meta\": {\n                \"type\": \"topic.TopicIndexPage\",\n                \"detail_url\": \"http://localhost/api/pages/22/\",\n                \"html_url\": \"http://localhost/verb/\",\n                \"slug\": \"verb\",\n                \"first_published_at\": \"2023-12-19T14:06:34.137265Z\"\n            },\n            \"title\": \"verb\"\n        }\n    ]\n}\n\n ```\n\nspecific data can be obtained using by adding another param field"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/pages/?type=topic.SubTopicIndexPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Returns all sub topics of main topic .\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 2\n    },\n    \"items\": [\n        {\n            \"id\": 20,\n            \"meta\": {\n                \"type\": \"topic.SubTopicIndexPage\",\n                \"detail_url\": \"http://localhost/api/pages/20/\",\n                \"html_url\": \"http://localhost/noun/common-noun/\",\n                \"slug\": \"common-noun\",\n                \"first_published_at\": \"2023-12-19T14:00:33.733333Z\"\n            },\n            \"title\": \"common noun\"\n        },\n        {\n            \"id\": 23,\n            \"meta\": {\n                \"type\": \"topic.SubTopicIndexPage\",\n                \"detail_url\": \"http://localhost/api/pages/23/\",\n                \"html_url\": \"http://localhost/verb/auxilary-verbs/\",\n                \"slug\": \"auxilary-verbs\",\n                \"first_published_at\": \"2023-12-19T14:05:11.450948Z\"\n            },\n            \"title\": \"auxilary verbs\"\n        }\n    ]\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/pages/?type=topic.TopicPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Returns detailed page of topic .\n\n``` json\n{\n    \"meta\": {\n        \"total_count\": 2\n    },\n    \"items\": [\n        {\n            \"id\": 21,\n            \"meta\": {\n                \"type\": \"topic.TopicPage\",\n                \"detail_url\": \"http://localhost/api/pages/21/\",\n                \"html_url\": \"http://localhost/noun/common-noun/common-noun/\",\n                \"slug\": \"common-noun\",\n                \"first_published_at\": \"2023-12-19T14:02:17.632990Z\"\n            },\n            \"title\": \"common-noun\"\n        },\n        {\n            \"id\": 24,\n            \"meta\": {\n                \"type\": \"topic.TopicPage\",\n                \"detail_url\": \"http://localhost/api/pages/24/\",\n                \"html_url\": \"http://localhost/verb/auxilary-verbs/auxilary-verbs/\",\n                \"slug\": \"auxilary-verbs\",\n                \"first_published_at\": \"2023-12-19T14:06:10.717041Z\"\n            },\n            \"title\": \"auxilary verbs\"\n        }\n    ]\n}\n\n ```\n\n> param field- fields  \nvalues - intro,body \n  \n\n`http://127.0.0.1:8000/api/pages/?type=topic.TopicPage&&fields=intro,body`"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/topic-page/34/documents/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "returns details of documents for a partcular page .\n\n``` json\n{\n    \"documents\": [\n        {\n            \"document_id\": 1,\n            \"document_name\": \"bash\"\n        },\n        {\n            \"document_id\": 3,\n            \"document_name\": \"ED VR20 Unit 5 Material\"\n        }\n    ]\n}\n\n ```"
+			},
+			"response": []
+		}
+	]
+}
