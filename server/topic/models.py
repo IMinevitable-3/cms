@@ -20,6 +20,7 @@ class TopicIndexPage(Page):
 
     content_panels = Page.content_panels + [FieldPanel("intro")]
 
+    parent_page_types = ["home.HomePage"]
     subpage_types = ["topic.SubTopicIndexPage"]
 
     api_fields = [
